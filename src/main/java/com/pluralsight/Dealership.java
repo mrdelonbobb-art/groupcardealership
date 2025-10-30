@@ -38,10 +38,10 @@ private ArrayList<Vehicle> inventory;
         return null;
     }
     public ArrayList<Vehicle> getAllVehicles(){
-        return this.inventory;
+        return this.inventory; //get all inventory
     }
     public void addVehicle(Vehicle vehicle){
-        this.inventory.add(vehicle);
+        this.inventory.add(vehicle); //puts vehicle on inventory list
     }
     public void removeVehicle(Vehicle vehicle){
         this.inventory.remove(vehicle);
