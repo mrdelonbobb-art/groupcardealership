@@ -75,15 +75,15 @@ public class userInterface {
     }
 
     public void processGetVehicleType() {
-
+this.processGetVehicleType();
     }
 
     public void processGetAllVehiclesRequest() {
-
+this.displayVehicles();
     }
 
     public void processAddVehicleRequest() {
-
+this.getV
     }
 
     public void processRemoveVehicleRequest() {
@@ -97,7 +97,7 @@ public class userInterface {
 
     private void displayVehicles(ArrayList<Vehicle>theVehicles) {
 for(Vehicle currentvehicle : theVehicles){
-    System.out.println(currentvehicle);
+    System.out.println(currentvehicle.toString());
 
 }
     }
