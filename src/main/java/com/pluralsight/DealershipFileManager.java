@@ -42,7 +42,7 @@ public class DealershipFileManager {
               theDealership.addVehicle(vehicle);
 
               {
-
+                  inventoryReader.close();
               }
             }
         } catch (IOException e) {

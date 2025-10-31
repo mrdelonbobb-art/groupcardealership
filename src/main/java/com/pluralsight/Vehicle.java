@@ -42,7 +42,13 @@ public class Vehicle {
         return price;
     }
 
-    public Vehicle(int year, String make, String model, String color, String vehicleType, int miles, int vin, double price) {
+    @Override
+    public String toString() {
+        return vin + " | " + year + " | " + make + " | " + model + " | " +
+                vehicleType + " | " + color + " | " + miles + " | $" + price;
+    }
+
+    public Vehicle(int year, int make, String model, String color, String vehicleType, String miles, int vin, double price) {
         this.vin = vin;
         this.year = year;
         this.make = make;
