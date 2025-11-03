@@ -55,10 +55,23 @@ public class userInterface {
     }
 
     public void processGetByPriceRequest() {
-this.processGetByPriceRequest();
+Scanner theScanner = new Scanner(System.in);
+        System.out.println("Minimum price you are willing to pay");
+        int minPrice = theScanner.nextInt();
+        System.out.println("Maximum price?");
+        int maxPrice = theScanner.nextInt();
+        ArrayList<Vehicle> matches = dealership.getVehiclesPrice(minPrice,maxPrice);
+        this.displayVehicles(matches);
     }
 
     public void processGetByMakeModelRequest() {
+        Scanner theScanner = new Scanner(System.in);
+        System.out.println("What make are you looking for?");
+        String Make = theScanner.nextLine();
+        System.out.println("Which Model?");
+        String Model =theScanner.nextLine();
+        ArrayList<Vehicle> matches = dealership.getVehiclesByMakeModel(Make,Model);
+        this.displayVehicles(matches);
 
     }
 
@@ -81,7 +94,13 @@ this.processGetByPriceRequest();
     }
 
     public void processGetByMileageRequest() {
-
+    Scanner theScanner = new Scanner(System.in);
+        System.out.println("Minimum miles you are looking for on a vehicle?");
+        int minMiles = theScanner.nextInt();
+        System.out.println("Maximum miles ?");
+        int maxMiles = theScanner.nextInt();
+        ArrayList<Vehicle> matches = dealership.getVehiclesByMiles(minMiles,maxMiles);
+        this.displayVehicles(matches);
     }
 
     public void processGetVehicleType() {
