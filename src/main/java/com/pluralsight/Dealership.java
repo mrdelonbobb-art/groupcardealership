@@ -26,15 +26,30 @@ private ArrayList<Vehicle> inventory;
         return null;
     }
     public ArrayList<Vehicle> getVehiclesByYear(int min,int max){
-        return null;
+        ArrayList<Vehicle> results =new ArrayList<Vehicle>();
+        for(Vehicle currentVehicle : this.inventory){
+            if(currentVehicle.getYear() > min && currentVehicle.getYear() < max){
+                results.add(currentVehicle);
+        return results;
     }
+
     public ArrayList<Vehicle> getVehiclesByColor(String color){
-        return null;
+        ArrayList<Vehicle> results =new ArrayList<Vehicle>();
+        for(Vehicle currentVehicle : this.inventory){
+            if(currentVehicle.getColor().equalsIgnoreCase(color)){
+                results.add(currentVehicle);
+            }
+        }
+        return results;
     }
     public ArrayList<Vehicle> getVehiclesByMiles(int miles){
         return null;
     }
     public ArrayList<Vehicle> getVehiclesByType(String vehicleType){
+        ArrayList<Vehicle> results =new ArrayList<Vehicle>();
+        for(Vehicle currentVehicle : this.inventory){
+            if(currentVehicle.getVehicleType().equalsIgnoreCase(vehicleType)){
+                results.add(currentVehicle);
         return null;
     }
     public ArrayList<Vehicle> getAllVehicles(){

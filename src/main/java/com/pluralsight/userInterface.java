@@ -55,7 +55,7 @@ public class userInterface {
     }
 
     public void processGetByPriceRequest() {
-
+this.processGetByPriceRequest();
     }
 
     public void processGetByMakeModelRequest() {
@@ -63,11 +63,21 @@ public class userInterface {
     }
 
     public void processGetByYearRequest() {
-
+        Scanner theScanner = new Scanner(System.in);
+        System.out.println("whats the minimum year?:");
+        int minYear = theScanner.nextInt();
+        System.out.println("whats the maximum year?");
+        int maxYear = theScanner.nextInt();
+        ArrayList<Vehicle> matches = dealership.getVehiclesByYear(minYear,maxYear);
+        this.displayVehicles(matches);
     }
 
     public void processGetByColorRequest() {
-
+    Scanner theScanner = new Scanner(System.in);
+        System.out.println("what color do you want?:");
+        String theColor = theScanner.nextLine();
+        ArrayList<Vehicle> matches = dealership.getVehiclesByColor(theColor);
+     this.displayVehicles(matches);
     }
 
     public void processGetByMileageRequest() {
@@ -75,7 +85,11 @@ public class userInterface {
     }
 
     public void processGetVehicleType() {
-this.processGetVehicleType();
+        Scanner theScanner = new Scanner(System.in);
+        System.out.println("what vehicle type do you want?:");
+        String theType = theScanner.nextLine();
+        ArrayList<Vehicle> matches = dealership.getVehiclesByType(theType);
+        this.displayVehicles(matches);
     }
 
     public void processGetAllVehiclesRequest() {
